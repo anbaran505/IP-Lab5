@@ -6,26 +6,37 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Book Inventory</title>
+        <title>Salary Details</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../GrossPay/style.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <center><h2>Book Inventory</h2></center>
+        <center><h1>Gross Salary Calculation</h1></center>
         <div class="container">
-            <form method="post" action="http://localhost:8080/Servlets/bookServlet">
-                <label for="bName">Enter Book Name</label>
-                <input type="text" autofocus name="bName">
+            
+            <form action="http://localhost:8080/Servlets/grossPayServlet">
+                <label for="name">Name</label>
+                <input type="text" name="name">
                 
                 <br><br>
                 
-                <label for="author">Enter Author Name</label>
-                <input type="text" name="author">
+                <label for="empid">Employee ID</label>
+                <input type="text" name="empid">
                 
                 <br><br>
                 
-                <input type="submit" value="Get Book">
+                <label for="basicPay">Basic Pay</label>
+                <input type="number" name="basicPay">
+                
+                <br><br>
+                
+                <label for="hra">HRA</label>
+                <input type="number" name="hra">
+                
+                <br><br>
+                
+                <input type="submit" value="Calculate Salary">
                 
             </form>
         </div>
